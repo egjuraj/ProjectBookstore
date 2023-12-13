@@ -10,7 +10,7 @@ public class BookController {
 	
 	private ArrayList<Book> books;
 	private static final String file="product.bin";
-	private File filename;
+	private final File filename;
 	
 	public BookController() {
 		books=new ArrayList<>();

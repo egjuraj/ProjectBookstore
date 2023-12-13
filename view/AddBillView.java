@@ -1,17 +1,11 @@
 package view;
 
-import java.time.LocalDate;
 import Controller.BillController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
@@ -20,6 +14,8 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import model.Bill;
 import model.User;
+
+import java.time.LocalDate;
 
 
 public class AddBillView {
@@ -93,21 +89,22 @@ public class AddBillView {
 	   	 create.setOnAction(new EventHandler<ActionEvent>() {
 	   		@Override
 			public void handle(ActionEvent event) {
-	   			int res;
-	            String name = nameField.getText();
-	            String supplier = supField.getText();
-	             res = Integer.parseInt(quantField.getText());
-	            LocalDate datePurchased = dateP.getValue();
-	            double sellPrice = Double.parseDouble(priceField.getText());
-	            BillController bc = new BillController();
-	            Bill bill = new Bill(name, supplier,datePurchased, sellPrice,res); 
-	            bc.writeFile(bill);
-	            Alert addBill = new Alert(Alert.AlertType.CONFIRMATION);
-	            addBill.setHeaderText("The bill was created successfully. You can always check it in the bill folder under the project folder.");
-	            addBill.showAndWait();
-	            LibrarianView cv = new LibrarianView(currentUser);
-	            primaryStage.setScene(cv.showView(primaryStage));
-	   		}
+                int res;
+                String name = nameField.getText();
+                String supplier = supField.getText();
+                res = Integer.parseInt(quantField.getText());
+                LocalDate datePurchased = dateP.getValue();
+                double sellPrice = Double.parseDouble(priceField.getText());
+                Bill bill = null;
+                BillController bc = new BillController(bill);
+                bill = new Bill(name, supplier, datePurchased, sellPrice, res);
+                bc.writeFile(bill);
+                Alert addBill = new Alert(Alert.AlertType.CONFIRMATION);
+                addBill.setHeaderText("The bill was created successfully. You can always check it in the bill folder under the project folder.");
+                addBill.showAndWait();
+                LibrarianView cv = new LibrarianView(currentUser);
+                primaryStage.setScene(cv.showView(primaryStage));
+            }
 			
 		});
 	   	 

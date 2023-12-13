@@ -8,8 +8,10 @@ import java.util.ArrayList;
 public class BillController {
     private ArrayList<Bill> bills;
     private final File file;
+    private  Bill bill;
 
-    public BillController() {
+    public BillController(Bill bill) {
+        this.bill = bill;
         bills = new ArrayList<>();
         file = new File("bills.bin");
         if(file.exists())  readBill();
@@ -30,7 +32,7 @@ public class BillController {
     }
 
  
-    public void addBill(Bill bill) {
+    public void addbill(Bill bill) {
         bills.add(bill);
         writeFile(bill);
     }
