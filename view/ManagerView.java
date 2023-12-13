@@ -135,13 +135,13 @@ User currentUser;
 			ManagerController mc = new ManagerController();
 			String result = mc.checkLibrarianPerformance(new LibrarianController());
 			System.out.println(result);
-			if(result=="OK") {
+			if(result.equals("OK")) {
 				Alert okAlert = new Alert(AlertType.INFORMATION);
 				okAlert.setHeaderText("Good performance");
 				okAlert.setContentText("The performace of the librarian is satisfying. He has ordered more than 5 bills today."+System.lineSeparator() +"You can always check his bills in the bills folder inside the project folder.");
 				okAlert.show();
 			}
-			else if(result=="FAIL") {
+			else if(result.equals("FAIL")) {
 				Alert warningAlert = new Alert(AlertType.WARNING);
 				warningAlert.setHeaderText("Bad performance");
 				warningAlert.setContentText("The performace of the librarian is not satisfying. He has ordered less than 5 bills today."+System.lineSeparator()	+ " You can always check his bills in the bills folder inside the project folder.");
