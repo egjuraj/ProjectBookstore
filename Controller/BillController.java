@@ -1,9 +1,9 @@
 package Controller;
 
+import model.Bill;
+
 import java.io.*;
 import java.util.ArrayList;
-
-import model.Bill;
 
 public class BillController {
     private ArrayList<Bill> bills;
@@ -38,7 +38,7 @@ public class BillController {
     public void writeFile(Bill bill) {
         try {
             File f = new File("bill");
-            f.mkdir()
+            f.mkdir();
             PrintWriter pw = new PrintWriter(new FileOutputStream(new File(f+ "/BillForClient.txt"), true));
             pw.println(bill.toString());
             pw.close();

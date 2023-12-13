@@ -9,7 +9,7 @@ public class Bill {
 	    private String billName;
 	    String supplier;
 	    private LocalDate billDate;
-	    private double price;
+	    private final double price;
 	    int quantitySold;
 
 		public Bill(String librarianUsername, String supplier, LocalDate billDate, double total, int quantity) {
