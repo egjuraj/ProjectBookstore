@@ -1,10 +1,13 @@
 package model;
 
+import java.io.Serial;
+
 public class Manager  extends User{
 
 	/**
 	 * 
 	 */
+	@Serial
 	private static final long serialVersionUID = 6700902789826811231L;
 private String access_level; 
 	
