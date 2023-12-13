@@ -1,9 +1,12 @@
 package model;
 
+import java.io.Serial;
+
 public class Librarian  extends User{
 	/**
 	 * 
 	 */
+	@Serial
 	private static final long serialVersionUID = 1277479482768625334L;
 	private String access_level; 
 	public Librarian(String firstName, String lastName, String username, String password ,
