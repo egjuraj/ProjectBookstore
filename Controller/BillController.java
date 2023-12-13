@@ -11,7 +11,6 @@ public class BillController {
     private  Bill bill;
 
     public BillController(Bill bill) {
-        this.bill = bill;
         bills = new ArrayList<>();
         file = new File("bills.bin");
         if(file.exists())  readBill();
