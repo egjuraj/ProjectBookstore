@@ -136,7 +136,7 @@ User currentUser;
 		ShowPerformance.setTextFill(Color.BLACK);
 		ShowPerformance.setOnAction(e->{
 			ArrayList<ProfitFromBooks> profitFromBooks = null;
-			ManagerController mc = new ManagerController(profitFromBooks);
+			ManagerController mc = new ManagerController(null);
 			String result = mc.checkLibrarianPerformance(new LibrarianController());
 			System.out.println(result);
 			if(result.equals("OK")) {
