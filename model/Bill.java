@@ -6,9 +6,9 @@ import java.time.LocalDate;
 public class Bill {
 
 	    private static int billNumber=0;
-	    private String billName;
+	    private final String billName;
 	    String supplier;
-	    private LocalDate billDate;
+	    private final LocalDate billDate;
 	    private final double price;
 	    int quantitySold;
 

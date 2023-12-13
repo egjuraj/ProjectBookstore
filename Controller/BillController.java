@@ -38,7 +38,7 @@ public class BillController {
     public void writeFile(Bill bill) {
         try {
             File f = new File("bill");
-            f.mkdir();
+            boolean mkdir = f.mkdir();
             PrintWriter pw = new PrintWriter(new FileOutputStream(new File(f+ "/BillForClient.txt"), true));
             pw.println(bill.toString());
             pw.close();
