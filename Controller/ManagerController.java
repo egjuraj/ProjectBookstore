@@ -1,20 +1,22 @@
 package Controller;
+
+import model.Manager;
+import model.ProfitFromBooks;
+
 import java.io.File;
 import java.util.ArrayList;
-
-import model.ProfitFromBooks;
-import model.Manager;
 
 
 public class ManagerController {
 
 	private ArrayList<Manager> manager;
-	private ArrayList<ProfitFromBooks> ProfitFromBooks;
+	private final ArrayList<ProfitFromBooks> ProfitFromBooks;
 	private ArrayList<LibrarianController> librarianController;
 	private int nrItems=0;
 	File file;
 	
-	public ManagerController() {
+	public ManagerController(ArrayList<model.ProfitFromBooks> profitFromBooks) {
+		ProfitFromBooks = profitFromBooks;
 		manager = new ArrayList<Manager>();
 	}
 

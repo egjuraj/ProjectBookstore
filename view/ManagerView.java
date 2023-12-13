@@ -19,7 +19,10 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import model.ProfitFromBooks;
 import model.User;
+
+import java.util.ArrayList;
 
 public class ManagerView {
 
@@ -132,7 +135,8 @@ User currentUser;
 		ShowPerformance.setFont(Font.font("Garamond", FontWeight.BOLD, 15));
 		ShowPerformance.setTextFill(Color.BLACK);
 		ShowPerformance.setOnAction(e->{
-			ManagerController mc = new ManagerController();
+			ArrayList<ProfitFromBooks> profitFromBooks = null;
+			ManagerController mc = new ManagerController(profitFromBooks);
 			String result = mc.checkLibrarianPerformance(new LibrarianController());
 			System.out.println(result);
 			if(result.equals("OK")) {
