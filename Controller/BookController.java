@@ -1,10 +1,9 @@
 package Controller;
 
+import model.Book;
+
 import java.io.*;
 import java.util.ArrayList;
-
-
-import model.Book;
 
 
 public class BookController {
@@ -68,7 +67,7 @@ public class BookController {
 	public int getPosition(Book book) {
 		
 		for(int i=0; i<books.size(); i++)	{
-			if(books.get(i).getISBN()==book.getISBN())
+			if(books.get(i).getISBN().equals(book.getISBN()))
 				return i;	}	
 		return -1;
 	}
