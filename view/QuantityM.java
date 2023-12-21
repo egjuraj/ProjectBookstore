@@ -29,10 +29,12 @@ import model.Book;
 import Controller.BookController;
 import Controller.PurchasedController;
 import model.User;
+import Controller.BookWriterService;
 
 public class QuantityM {
+	private BookWriterService bookWriterServiceMock;
 	User currentUser;
-	BookController pc = new BookController();;
+	BookController pc = new BookController(bookWriterServiceMock);;
     Book currentBook;
     
     ObservableList<Book> book = FXCollections.observableArrayList(pc.getBooks());

@@ -6,7 +6,7 @@ public class ProfitFromBooks implements Calculations{
 	private int quantity;
 	private double price;
 	
-	public ProfitFromBooks(String titleOfBook, int quantity, double price) {
+	public ProfitFromBooks(String titleOfBook,int quantity,double price) {
 		super();
 		this.titleOfBook = titleOfBook;
 		this.quantity = quantity;

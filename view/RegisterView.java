@@ -118,7 +118,7 @@ public RegisterView(User currentUser) {
 				String salary ="";
 				
 				
-				UserController uc= new UserController();
+				UserController uc= new UserController(null);
 				if(username.matches("[_\\da-z]{3,}") && phone.matches("06[789]\\d{7}") && (!firstName.isEmpty()) && (!lastName.isEmpty()) && (!password.isEmpty()) && (!verifyPassword.isEmpty()) && (!phone.isEmpty()) && (!profession.isEmpty())) {
 				boolean isRegistered = uc.signUp(firstName, lastName, username, password, verifyPassword, phone, profession, salary);
 				if(isRegistered){

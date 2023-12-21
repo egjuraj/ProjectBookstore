@@ -51,7 +51,7 @@ User currentUser;
 			public void handle(ActionEvent event) {
 				// TODO Auto-generated method stub
 				if(CategoryField.getText().toString().matches("[A-Z][a-z]*\\s?[a-z]*")) {
-					CategoryController cc = new CategoryController();
+					CategoryController cc = new CategoryController(null);
 				    cc.addCategory(new Category(CategoryField.getText()));
 				    CategoryField.clear();
 				    new Alert(AlertType.CONFIRMATION,"The New Category has been added to your store!").show();

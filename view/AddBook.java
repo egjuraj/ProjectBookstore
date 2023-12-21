@@ -81,7 +81,7 @@ public class AddBook {
 			Label category = new Label("Category");	
 			category.setFont(Font.font("Garamond", FontWeight.EXTRA_BOLD, 15));
 		   	category.setStyle("-fx-text-fill: black;");
-			CategoryController cc = new CategoryController();
+			CategoryController cc = new CategoryController(null);
 			ChoiceBox categoryField = new ChoiceBox(FXCollections.observableArrayList(cc.getCategories()));
 			categoryField.getSelectionModel().select(0);
 						

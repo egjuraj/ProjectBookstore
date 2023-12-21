@@ -7,6 +7,9 @@ public class Supplier implements Serializable {
 	private String nameOfSupplier;
     private String emailOfSupplier;
     private String phoneOfSupplier;
+	public Supplier(String nameOfSupplier){
+		this.nameOfSupplier=nameOfSupplier;
+	}
     
     public Supplier(String nameOfSupplier, String emailOfSupplier, String phoneOfSupplier) {
 		super();

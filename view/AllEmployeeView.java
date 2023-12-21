@@ -33,7 +33,7 @@ private User currentUser;
 	
 	public Scene showView(Stage stage){
 		VBox root= new VBox();
-		UserController uc= new UserController();
+		UserController uc= new UserController(null);
 		ObservableList<User> users=FXCollections.observableArrayList(uc.getUsers());
 		
 		TableView<User> table = new TableView();

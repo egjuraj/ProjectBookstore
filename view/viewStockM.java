@@ -18,9 +18,10 @@ import javafx.stage.Stage;
 import model.Book;
 import Controller.BookController;
 import model.User;
-
+import Controller.BookWriterService;
 public class viewStockM {
 	User currentUser;
+    private BookWriterService bookWriterServiceMock;
 
 	public viewStockM(User currentUser) {
 		super();
@@ -31,7 +32,7 @@ public class viewStockM {
 		BorderPane mainPane = new BorderPane();
 		mainPane.setPadding(new Insets(40, 100 , 40, 100));
 		
-		BookController bc=new BookController();
+		BookController bc=new BookController(bookWriterServiceMock);
         CategoryAxis xAxis = new CategoryAxis();
         NumberAxis yAxis = new NumberAxis();
         

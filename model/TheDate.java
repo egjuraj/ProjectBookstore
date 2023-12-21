@@ -44,8 +44,12 @@ public class TheDate implements Serializable {
 		this.year = year;
 	}
 
-	@Override
+	/*@Override
 	public String toString() {
 		return "TheDate [day=" + day + ", month=" + month + ", year=" + year + "]";
+	}*/
+	@Override
+	public String toString() {
+		return String.format("%02d/%02d/%04d", day, month, year);
 	}
 }

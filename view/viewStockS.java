@@ -1,4 +1,7 @@
 package view;
+
+import Controller.BookController;
+import Controller.BookWriterService;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -9,20 +12,16 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import model.Manager;
 import model.Book;
-import Controller.BookController;
 import model.User;
-
-
 public class viewStockS {
+	private BookWriterService bookWriterServiceMock;
 
 	 User currentUser;
 
@@ -34,7 +33,7 @@ public class viewStockS {
 			BorderPane mainPane = new BorderPane();
 			mainPane.setPadding(new Insets(40, 100 , 40, 100));
 			
-			BookController pc=new BookController();
+			BookController pc=new BookController(bookWriterServiceMock);
 	        CategoryAxis xAxis = new CategoryAxis();
 	        NumberAxis yAxis = new NumberAxis();
 	        

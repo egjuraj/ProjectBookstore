@@ -1,8 +1,7 @@
 package view;
 
-import java.util.ArrayList;
-
 import Controller.BookController;
+import Controller.BookWriterService;
 import Controller.SupplierController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,12 +10,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
@@ -30,7 +24,10 @@ import javafx.stage.Stage;
 import model.Book;
 import model.Supplier;
 import model.User;
+
+import java.util.ArrayList;
 public class ViewSuppliersS {
+	private BookWriterService bookWriterServiceMock;
 	 User currentUser;
 		private Supplier cp;
 		ObservableList<Book> books;
@@ -43,7 +40,8 @@ public class ViewSuppliersS {
 
 		public Scene showView(Stage st) {
 			
-			SupplierController sc =new SupplierController();
+			SupplierController sc =new SupplierController(null
+			);
 			ObservableList<Supplier> suppliers = FXCollections.observableArrayList(sc.getSuppliers());
 		
 			BorderPane mainPane = new BorderPane();
@@ -112,8 +110,8 @@ public class ViewSuppliersS {
 
 				@Override
 				public void handle(ActionEvent event) {
-					SupplierController sc = new SupplierController();
-					BookController pc = new BookController();
+					SupplierController sc = new SupplierController(null);
+					BookController pc = new BookController(bookWriterServiceMock);
 					if(table.getSelectionModel().getSelectedItems().isEmpty()) {
 						new Alert(AlertType.ERROR,"Please select a supplier!!").show();;
 						
@@ -229,7 +227,7 @@ public class ViewSuppliersS {
 			
 			bback.getChildren().add(back);
 			mainPane.setBottom(bback);
-			mainPane.setStyle("-fx-background-color: url('resources/supView.jpg'); " +
+			mainPane.setStyle(
 			           "-fx-background-position: center center; " +
 			           "-fx-background-repeat: stretch;" +
 			           "-fx-background-size: 800 600") ;
@@ -245,7 +243,7 @@ public class ViewSuppliersS {
 		
 	     void Click(Stage St, Supplier supplier) {
 			this.cp=supplier;
-			BookController pc = new BookController();
+			BookController pc = new BookController(bookWriterServiceMock);
 			ArrayList<Book> sp = new ArrayList<Book>();
 			for(Book i: pc.getBooks()) {
 				if(i.getSupplier().equals(supplier.getnameOfSupplier())){

@@ -7,10 +7,10 @@ public class Bill {
 
 	    private static int billNumber=0;
 	    private final String billName;
-	    String supplier;
+	    public String supplier;
 	    private final LocalDate billDate;
 	    private final double price;
-	    int quantitySold;
+	    public int quantitySold;
 
 		public Bill(String librarianUsername, String supplier, LocalDate billDate, double total, int quantity) {
 			this.billName = librarianUsername;

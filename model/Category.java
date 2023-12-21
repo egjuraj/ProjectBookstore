@@ -8,7 +8,7 @@ public class Category implements Serializable {
 	 * 
 	 */
 	@Serial
-	private static final long serialVersionUID = -2564026012494993767L;
+	public static final long serialVersionUID = -2564026012494993767L;
 	String category;
 
 	public Category(String category) {

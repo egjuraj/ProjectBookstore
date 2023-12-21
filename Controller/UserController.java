@@ -1,30 +1,29 @@
 package Controller;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 
-import javafx.scene.control.TableView;
-import model.Librarian;
-import model.Manager;
 import model.User;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class UserController {
-	private ArrayList<User> users;
-	private File file;
-	public UserController(){
-		users= new ArrayList<>();
-		file= new File("users.bin");
-		if(file.exists()){
+	public ArrayList<User> users;
+	private static final String file="product.bin";
+	public File filename;
+	private String errorMessage="";
+	UserWriterService userWriterService;
+	public UserController(UserWriterService userWriterService) {
+		this.userWriterService = userWriterService;
+		users = new ArrayList<>();
+		filename = new File(file);
+		/*if(file.exists()){
 			readUsers();
 		}
 		else {
 			writeUsers();
-		}
+		}*/
 	}
-	private void readUsers() {
+	/*public void readUsers() {
 		try{
 			FileInputStream fis= new FileInputStream(file);
 			ObjectInputStream ois= new ObjectInputStream(fis);
@@ -35,7 +34,8 @@ public class UserController {
 			System.out.println(e.getMessage());
 		}
 		
-	}
+	}*/
+	/*
 	private void writeUsers(){
 		try{
 			FileOutputStream fos= new FileOutputStream(file);
@@ -46,7 +46,22 @@ public class UserController {
 		}catch(Exception e){
 			System.out.println(e.getMessage());
 		}
+	}*/
+	public void writeUsers() {
+		try {
+			userWriterService.writeUsersToFile(users, new File(file));
+		} catch (IOException e) {
+			errorMessage=e.getMessage();
+			System.out.println(errorMessage);
+		}
 	}
+	public void readUsers() {
+		try {
+			users = userWriterService.readUsersFromFile(new File(file));
+		} catch (IOException | ClassNotFoundException e) {
+			errorMessage = "Error reading books from file: " + e.getMessage();
+			System.err.println(errorMessage);
+		}}
 	public void addUser(User u){
 		this.users.add(u);
 		writeUsers();
@@ -91,6 +106,13 @@ public class UserController {
 			}
 		}
 		return -1;
+	}
+	public void setFile(File file) {
+		this.filename = file;
+	}
+
+	public String getErrorMessage(){
+		return errorMessage;
 	}
 
 }

@@ -11,7 +11,7 @@ public class ManagerController {
 
 	private ArrayList<Manager> manager;
 	private final ArrayList<ProfitFromBooks> ProfitFromBooks;
-	private ArrayList<LibrarianController> librarianController;
+	//private ArrayList<LibrarianController> librarianController;
 	private int nrItems=0;
 	File file;
 	
@@ -25,22 +25,21 @@ public class ManagerController {
 	}
 
 	public void setManager(ArrayList<Manager> manager) {
-		this.manager = manager;
-	}
+		this.manager = manager;}
 	
 	public int getProfitFromBooks() {
 		return this.nrItems;
 	}
 	
-	public void setProfitFromBooks(int nr) {
-		nrItems = nr;
-	}
+	public void setProfitFromBooks(int nr) {nrItems = nr;}
 	
 	public void addItem(ProfitFromBooks i) {
 		ProfitFromBooks.add(i);
 		nrItems++;
 	}
-	
+	public void addManager(Manager newManager) {
+		manager.add(newManager);
+	}
 	public String checkLibrarianPerformance(LibrarianController c) {
 	  
 		if(c.getNrBills()>=5)

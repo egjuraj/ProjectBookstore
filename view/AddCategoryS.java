@@ -51,7 +51,7 @@ User currentUser;
 			public void handle(ActionEvent event) {
 				
 				if(CategoryField.getText().toString().matches("[A-Z][a-z]*\\s?[a-z]*")) {
-					CategoryController cc = new CategoryController();
+					CategoryController cc = new CategoryController(null);
 				    cc.addCategory(new Category(CategoryField.getText()));
 				    CategoryField.clear();
 				    new Alert(AlertType.CONFIRMATION,"The New Category has been added to your store!").show();
@@ -81,7 +81,7 @@ User currentUser;
 		Scene scene = new Scene(gp,450,300);
 		St.setScene(scene);
 		St.setResizable(false);
-		gp.setStyle("-fx-background-image: url('resources/category.jpg'); " +
+		gp.setStyle(
 		           "-fx-background-position: center center; " +
 		           "-fx-background-repeat: stretch;" +
 		           "-fx-background-size: 450 300") ;

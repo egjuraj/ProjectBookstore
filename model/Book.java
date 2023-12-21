@@ -8,7 +8,10 @@ public class Book implements Serializable{
 	private String category;
 	private String supplier;
 
-	private int stock;	
+	private int stock;
+	public Book(){
+
+	}
 	
 	public Book(String barcode, String titleOfBook,  int stock) {
 		this.stock = stock;

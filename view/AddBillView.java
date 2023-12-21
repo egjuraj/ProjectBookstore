@@ -96,9 +96,9 @@ public class AddBillView {
 				LocalDate datePurchased = dateP.getValue();
 				double sellPrice = Double.parseDouble(priceField.getText());
 				Bill bill = new Bill(name, supplier,datePurchased, sellPrice,res);
-				BillController bc = new BillController(bill);
+				BillController bc = new BillController(null);
 
-				bc.writeFile(bill);
+				bc.writeFile();
 				Alert addBill = new Alert(Alert.AlertType.CONFIRMATION);
 				addBill.setHeaderText("The bill was created successfully. You can always check it in the bill folder under the project folder.");
 				addBill.showAndWait();

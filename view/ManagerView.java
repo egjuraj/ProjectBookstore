@@ -137,7 +137,7 @@ User currentUser;
 		ShowPerformance.setOnAction(e->{
 			ArrayList<ProfitFromBooks> profitFromBooks = null;
 			ManagerController mc = new ManagerController(null);
-			String result = mc.checkLibrarianPerformance(new LibrarianController());
+			String result = mc.checkLibrarianPerformance(new LibrarianController(null));
 			System.out.println(result);
 			if(result.equals("OK")) {
 				Alert okAlert = new Alert(AlertType.INFORMATION);

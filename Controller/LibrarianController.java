@@ -1,17 +1,10 @@
 package Controller;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-
 import model.Librarian;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.io.IOException;
 
 
 public class LibrarianController{
@@ -19,19 +12,32 @@ public class LibrarianController{
 	private ArrayList<Librarian> cashier;
 	File file;
 	private int nrBills=0;
-	
-	public LibrarianController() {
+	 LibrarianWriterService librarianWriterService;
+
+	public LibrarianController(LibrarianWriterService librarianWriterService) {
 		cashier = new ArrayList<Librarian>();
+		this.librarianWriterService=librarianWriterService;
 	}
-	
-	public void createBill(Librarian cashier) throws FileNotFoundException, IOException{
+
+	/*public void createBill(Librarian cashier) throws FileNotFoundException, IOException{
 		file = new File("data.bin");
-		FileOutputStream fos = new FileOutputStream(file); 
-		ObjectOutputStream oos = new ObjectOutputStream(fos); 
+		FileOutputStream fos = new FileOutputStream(file);
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		oos.writeObject(cashier);
 		fos.close();
 		oos.close();
 		nrBills++;
+	}*/
+	public void createBill(Librarian cashier) throws IOException {
+		librarianWriterService.writeBillToFile(cashier, getFile());
+		nrBills++;
+	}
+
+	public File getFile() {
+		return this.file;
+	}
+	public void setFile(File file) {
+		this.file = file;
 	}
 	
 	public ArrayList<Librarian> getCashier() {
