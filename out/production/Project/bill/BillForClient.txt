@@ -1,0 +1,376 @@
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian1
+ supplier=Supplier1
+ billDate=2023-12-14
+ price=150.0
+ quantitySold=7
+
+
+Bill 
+billName=Librarian2
+ supplier=Supplier2
+ billDate=2023-12-14
+ price=200.0
+ quantitySold=10
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian1
+ supplier=Supplier1
+ billDate=2023-12-14
+ price=150.0
+ quantitySold=7
+
+
+Bill 
+billName=Librarian2
+ supplier=Supplier2
+ billDate=2023-12-14
+ price=200.0
+ quantitySold=10
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=null
+ billDate=null
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=null
+ billDate=null
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=null
+ billDate=null
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=null
+ billDate=null
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-14
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-01-15
+ price=200.0
+ quantitySold=3
+
+
+Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2023-12-15
+ price=100.0
+ quantitySold=5
+
+
