@@ -1,0 +1,81 @@
+[]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-15
+ price=100.0
+ quantitySold=5
+
+]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-15
+ price=100.0
+ quantitySold=5
+
+]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-15
+ price=100.0
+ quantitySold=5
+
+]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-15
+ price=100.0
+ quantitySold=5
+
+]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-15
+ price=100.0
+ quantitySold=5
+
+]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-15
+ price=100.0
+ quantitySold=5
+
+]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-16
+ price=100.0
+ quantitySold=5
+
+]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-16
+ price=100.0
+ quantitySold=5
+
+]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-16
+ price=100.0
+ quantitySold=5
+
+]
+[Bill 
+billName=Librarian
+ supplier=Supplier
+ billDate=2024-01-16
+ price=100.0
+ quantitySold=5
+
+]
